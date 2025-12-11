@@ -6,7 +6,8 @@ import subprocess
 
 def load_data():
     zip_path = "telco-customer-churn.zip"
-    csv_path = os.path.join("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    extract_path = "telco_churn_raw"
+    csv_path = os.path.join(extract_path, "WA_Fn-UseC_-Telco-Customer-Churn.csv")
     
     download_cmd = [
         "curl", "-L", "-o", zip_path,
@@ -57,7 +58,7 @@ def preprocess_data(df):
     return df_clean
     
 if __name__ == "__main__":
-    OUTPUT_DIR = 'preprocessing/telco_preprocessed'
+    OUTPUT_DIR = 'telco_preprocessed'
     OUTPUT_FILE = 'telco_churn_clean.csv'
     
     os.makedirs(OUTPUT_DIR, exist_ok=True)
