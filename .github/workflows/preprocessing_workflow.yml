@@ -27,7 +27,6 @@ jobs:
           
       - name: Run Preprocessing Script
         run: |
-          cd preprocessing
           python automate_Kevin-Bramasta.py
           
       - name: Commit and Push Changes
@@ -35,7 +34,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-          git add preprocessing/namadataset_preprocessing/telco_churn_clean.csv
+          git add telco_preprocessing/telco_churn_clean.csv
 
           if git diff --staged --quiet; then
             echo "No changes to commit."
