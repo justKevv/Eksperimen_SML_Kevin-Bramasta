@@ -6,8 +6,7 @@ import subprocess
 
 def load_data():
     zip_path = "telco-customer-churn.zip"
-    extract_path = ""
-    csv_path = os.path.join(extract_path, "WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    csv_path = os.path.join("WA_Fn-UseC_-Telco-Customer-Churn.csv")
     
     download_cmd = [
         "curl", "-L", "-o", zip_path,
