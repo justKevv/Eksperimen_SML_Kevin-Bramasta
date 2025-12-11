@@ -30,6 +30,7 @@ jobs:
           
       - name: Run Preprocessing Script
         run: |
+          cd preprocessing
           python automate_Kevin-Bramasta.py
           
       - name: Commit and Push Changes
